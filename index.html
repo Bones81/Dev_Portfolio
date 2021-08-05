@@ -2,22 +2,28 @@
 <html>
   <head>
     <title>Nate Codes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Red+Hat+Display:wght@500;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./CSS/reset.css">
     <link rel="stylesheet" href="./CSS/style.css">
   </head>
   <body>
     <header>
-      <img class="header-img" src="" alt="Nate Codes logo">
+      <h1>
+        <a href="#">&lt;NATE CODES&gt;</a>
+      </h1>
     </header>
     <nav>
       <ul class="nav-list">
-        <li class="nav-item">Portfolio Projects</li>
-        <li class="nav-item">Bio</li>
-        <li class="nav-item">Contact</li>
+        <li class="nav-item" id="nav-projects-el">Portfolio Projects</li>
+        <li class="nav-item" id="nav-bio-el">Bio</li>
+        <li class="nav-item" id="nav-contact-el">Contact</li>
       </ul>
     </nav>
     <div class="content-wrapper">
-      <div class="projects">
+      <div id="projects" class="hidden">
         <div class="project">
           <a class="project-link" href="https://bones81.github.io/Developer-Blog/" target="_blank" rel="noopener noreferrer">Developer Blog</a>
           | <a href="https://github.com/Bones81/Developer-Blog" class="code-link" target="_blank" rel="noopener noreferrer">Code</a>
@@ -55,16 +61,17 @@
           | <a href="https://github.com/Bones81/Tic-Tac-Toe" class="code-link" target="_blank" rel="noopener noreferrer">Code</a>
         </div>
       </div>   
-      <div class="bio">
+      <div id="bio" class="hidden">
         <p class="bio-text">Versatile, personable, & reliable asset known for diligence & talent. Broad experience as performer, hospitality professional, editor, & legal assistant. Eager & quick learner with strong record of success. Learning coding & web development (self-teaching) with goal of transitioning into web/software development. Currently seeking entry-level position.</p>
       </div>
-      <div class="contact">
+      <div id="contact" class="hidden">
         <div class="contact-social">PLACE LINKS TO SOCIAL MEDIA HERE</div>
         <div class="contact-email">Email: NathanLFreeman@gmail.com</div>
         <div class="contact-phone">Phone: (+1) 212-517-8350</div>
         <div class="contact-address">Address:<br>725 W 172ND ST<br>Apt 68<br>New York, NY 10032<br>USA</div>
       </div>
     </div>
-    <footer>&copy; 2021 Nathan Freeman</footer>
+    <footer>&copy; 2021 Nathan Freeman <br>&lt;/NATE CODES&gt;</footer>
+    <script src="./JS/script.js"></script>
   </body>
 </html>
