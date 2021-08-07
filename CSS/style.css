@@ -18,6 +18,9 @@ body {
   width: 100vw;
   height: 100vh;
   scroll-behavior: smooth;
+  background: linear-gradient(35deg, rgb(6, 6, 41), rgb(3, 3, 153));
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -47,50 +50,115 @@ nav {
 .nav-list {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 1em;
+  margin-left: 2em;
 }
 
 .nav-item {
-  padding-top: 1em;
-  padding-bottom: 1em;
-  padding-right: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-right: 2em;
   font-variant: small-caps;
-  font-size: 1.12em;
+  font-size: 1.25em;
   cursor: pointer;
+  transition: all 250ms;
+}
+
+.nav-item:hover {
+  transform: scale(1.2);
 }
 
 .content-wrapper {
   padding: 1.25em;
   background: linear-gradient(145deg, whitesmoke, lightgrey);
   font-family: 'Red Hat Display', sans-serif;
-  min-height: 300px;
 }
 
 .hidden {
   display: none;
 }
 
-#projects, #bio, #contact {
+#content-default, #projects, #bio, #contact {
   border: 2px solid rgb(3, 3, 153);
   border-radius: 10px;
   padding: 10px;
   box-shadow: black 2px 2px 4px;
+  line-height: 1.5em;
 }
 
 .project {
-  line-height: 1.5em;
+  height: auto;
+  background: linear-gradient(to bottom, whitesmoke, lightgrey);
+  display: grid;
+  grid-template-columns: auto, 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 5px;
+  grid-template-areas: 
+    "projectName codeLink";
+  align-items: center;
+  margin-bottom: 5px;
+  padding: 0.75em 2em;
+  box-shadow: rgb(3, 3, 153) -2px 3px 5px;
+}
+
+
+#content-default {
+  text-align: center;
+}
+
+.project-name, .project-link {
+  grid-area: projectName;
+  justify-self: left;
+  font-size: 1.5em;
+  line-height: 1.12em;
+  text-decoration: none;
+}
+
+.project-link, .code-link {
+  transition: transform 300ms;
+}
+
+.project-link:hover {
+  transform: scale(1.12);
+}
+
+.code-link:hover {
+  transform: scale(1.75);
+}
+
+.code-link {
+  grid-area: codeLink;
+  justify-self: right;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 300ms;
+}
+
+#bio, #contact {
+  font-size: 1.25em;
 }
 
 footer {
   background: linear-gradient(35deg, rgb(6, 6, 41), rgb(3, 3, 153));
   color: whitesmoke;
   width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 15vw;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  justify-content: center;
+
+}
+
+.footer-text, #site-title-footer {
   font-size: 2em;
-  text-align: center;
-  padding: 1em;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Josefin Sans', sans-serif; 
+}
+
+.footer-text {
   font-style: italic;
-  line-height: 1.25em;
 }
 
 @media (min-width: 548px) {
@@ -99,11 +167,11 @@ footer {
   }
 
   .nav-item {
-    font-size: 1.5em;
+    font-size: 1.75em;
   }
 
   #projects, #bio, #contact {
-    max-width: 50%;
+    max-width: 80%;
     position: relative;
     left: 5vw;
   }
