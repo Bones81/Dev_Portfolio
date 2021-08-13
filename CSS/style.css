@@ -67,6 +67,32 @@ nav {
   transform: scale(1.2);
 }
 
+.whats-new {
+  color: rgb(6, 6, 41);
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.25em;
+  margin-left: 15vw;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background: linear-gradient(to bottom, whitesmoke, lightgrey);
+  border-radius: 5px;
+  box-shadow: whitesmoke 2px 2px 2px,
+    whitesmoke -2px 2px 2px,
+    whitesmoke 2px -2px 2px,
+    whitesmoke -2px -2px 2px;
+  padding: 10px;
+  width: fit-content;
+}
+
+.whats-new-link {
+  text-decoration: none;
+  color: rgb(6, 6, 41);
+}
+
+.whats-new-link:hover {
+  color: orange;
+}
+
 .content-wrapper {
   padding: 1.25em;
   background: linear-gradient(145deg, whitesmoke, lightgrey);
